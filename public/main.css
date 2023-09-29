@@ -443,8 +443,14 @@
 /* extra skills  */
 .ExtraSkills {
     position: relative;
+    display: flex;
+    margin-bottom: 14px;
+    /* width: 221px; */
+    align-items: center;
+    flex-direction: row;
+    position: relative;
     width: 95px;
-    height: 50px;
+    height: 22px;
     /* H4 - 18px */
     font-family: sans-serif;
     font-style: normal;
@@ -453,11 +459,10 @@
     line-height: 123.6%;
     margin-bottom: 15px;
     /* or 22px */
-    text-transform: capitalize;
+    /* text-transform: capitalize; */
     /* Black */
     color: black;
-    justify-content: space-between;
-}
+  }
 
 .bang {
     position: relative;
@@ -469,4 +474,195 @@
     border-top: 10px;
     justify-content: space-between;
 }
+/* ***************** */
 
+
+
+.midd_frame {
+    position: relative;
+  width: 970px;
+  height: 1259px;
+  margin-left: 30px;
+  margin-right: 27px;
+  display: flex;
+  flex-direction: column;
+}
+.right_frame {
+    position: relative;
+    width: 108px;
+    height: 1315px;
+    background-color: white;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: chartreuse;
+  }
+  .midd_top {
+    position: relative;
+    width: 970px;
+    height: 467.09px;
+    background-color: white;
+    margin-bottom: 138.91px;
+  }
+  .midd_bot {
+    position: relative;
+    width: 970px;
+    height: 653px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+    /* align-items: center; */
+    background-color: #E5E5E5;
+  }
+  
+  .midd_top_frame {
+    display: flex;
+    flex-direction: column;
+    width: 970px;
+  }
+  .round_yellow {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    left: 496px;
+    top: 46px;
+    border-radius: 50%;
+    border: 2px solid rgba(5, 255, 0, 0.8);
+    box-sizing: border-box;
+  }
+  
+  .round_green {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    left: 898px;
+    top: 79px;
+    border: 2px solid rgba(255, 180, 0, 0.8);
+    box-sizing: border-box;
+  }
+  
+  .round_yellow_1 {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    left: 554.86px;
+    top: 379.96px;
+    border-radius: 50%;
+    border: 2px solid rgba(255, 180, 0, 0.8);
+    box-sizing: border-box;
+  }
+  
+  .round_green_1 {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    left: 90px;
+    top: 422px;
+    border-radius: 50%;
+    border: 2px solid rgba(5, 255, 0, 0.8);
+    box-sizing: border-box;
+  }
+  
+  .rectangle_yellow {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    left: 63.66px;
+    top: 25.66px;
+    border-radius: 50%;
+    border: 2px solid rgba(255, 180, 0, 0.8);
+    box-sizing: border-box;
+    transform: rotate(26.05deg);
+  }
+  
+  .rectangle_blue {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    left: 375.03px;
+    top: 331px;
+    
+    border: 2px solid rgba(0, 71, 255, 0.8);
+    box-sizing: border-box;
+    transform: rotate(26.05deg);
+  }
+  
+  .triangle_red {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    left: 925px;
+    top: 427px;
+    
+    border-radius: 100px 10px 15px 20px;
+    
+    border: 2px solid rgba(255, 46, 0, 0.8);
+    box-sizing: border-box;
+  }
+
+  .midd_top_div {
+  display: flex;
+  flex-direction: row;
+}
+.midd_top_main_text {
+    position: relative;
+    width: 500px;
+    height: 118px;
+    
+    font-family: sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 123.6%;
+    margin-top: 93px;
+    margin-left: 60px;
+    display: flex;
+    flex-direction: column;
+    /* or 59px */
+    
+    
+    /* Black */
+    
+    color: #2B2B2B;
+  }
+  
+  .midd_top_text {
+    position: relative;
+    width: 424px;
+    height: 88px;
+    
+    /* H6 - 16px */
+    
+    font-family: sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    margin-top: 18px;
+    margin-left: 60px;
+    /* or 150% */
+    display: flex;
+    flex-direction: column;
+    text-transform: capitalize;
+    font-feature-settings: 'calt' off, 'kern' off;
+    
+    /* Paragraph Font */
+    
+    color: #767676;
+  }
+  
+  .link_href {
+    text-decoration: none;
+    color: rgb(57, 5, 247);
+    color: var(--Black, #2B2B2B);
+text-align: left;
+font-family: Inter;
+font-size: 22px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+background-color: #ffb400;
+  }
+  
