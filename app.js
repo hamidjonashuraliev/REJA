@@ -6,6 +6,8 @@ const app = express();
 
 //Mongo DB chaqirish
 const db = require("./server").db();
+const mongodb = require("mongodb");
+
 // let user;
 // fs.readFile("database/user.json", "utf8", (err, data) => {
 //     if (err) {
@@ -35,20 +37,35 @@ app.set("view engine", "ejs");
 // });
 app.post("/create-item", (req, res) => {
     console.log("user entered /create-item");
-    console.log(req.body);
+    // console.log(req.body);
     const new_reja = req.body.reja;
-    db.collection("plans").insertOne({ reja: new_reja }, (err, data) => {
-      
-       res.json(data.ops[0]);
+    db.collection("plans")
+    .insertOne({ reja: new_reja }, (err, data) => {
+        res.json(data.ops[0]);
     });
     // TOTO: code with db here
 });
 // app.get("/author", (req, res) => {
-//     res.render("author", { user: user });
+// //     res.render("author", { user: user });
 // });
 
+app.post("/delete-item", (req, res) => {
+const id = req.body.id;
+// console.log(id);
+// res.end("done");
+db.collection("plans").deleteOne(
+    {_id: new mongodb.ObjectId(id) }, 
+    function(err, data) {
+    res.json({ state: "success" });
+}
+);
+});
+
+
+
+
 app.get("/", function (req, res) {
-    console.log("user entered /create-item");
+    console.log("user entered /");
     db.collection("plans")
     .find()
     .toArray((err, data) => {
@@ -56,7 +73,6 @@ app.get("/", function (req, res) {
             console.log(err);
             res.end("something went wrong");
         } else {
-            
             res.render("reja", { items: data});
         }
     });
