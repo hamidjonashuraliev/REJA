@@ -98,3 +98,18 @@ document.getElementById("clean-all").addEventListener("click", function() {
         document.location.reload();
     })
 })
+app.post("/delete-item", (req, res) => {
+    const id = req.body.id;
+    db.collection("plans").deleteOne(
+      { _id: new mongodb.ObjectId(id) },
+      function (err, result) {
+        if (err) {
+          console.error("Error deleting document:", err);
+          res.json({ success: false, error: err.message });
+        } else {
+          console.log("Document deleted successfully");
+          res.json({ success: true });
+        }
+      }
+    );
+  });
